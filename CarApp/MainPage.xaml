@@ -8,6 +8,44 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="TrucksButton" Content="Trucks" 
+                HorizontalAlignment="Left" Margin="800,152,0,0" 
+                VerticalAlignment="Top" Height="128" Width="248"
+                FontSize="30" Click="TrucksButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <CompositeTransform CenterY="0.5" CenterX="0.5" Rotation="-49.086"/>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFC50000"/>
+                    <GradientStop Color="#FFC50000" Offset="1"/>
+                    <GradientStop Color="#FF0BB20B" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="CarsButton" Content="Cars" 
+                HorizontalAlignment="Left" Margin="246,152,0,0" 
+                VerticalAlignment="Top" Height="128" Width="248"
+                FontSize="30" Click="CarsButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <CompositeTransform CenterY="0.5" CenterX="0.5" Rotation="-135"/>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFD7E011" Offset="0"/>
+                    <GradientStop Color="#FF0FB8D3" Offset="1"/>
+                    <GradientStop Color="#FF68F154" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="TrucksTextBlock" HorizontalAlignment="Left" 
+                   TextAlignment="Center" FontSize="30"
+                   Margin="800,480,0,0" TextWrapping="Wrap" Text="0" 
+                   VerticalAlignment="Top" Height="128" Width="248"/>
+        <TextBlock x:Name="CarsTextBlock" HorizontalAlignment="Left" 
+                   TextAlignment="Center" FontSize="30"
+                   Margin="246,480,0,0" TextWrapping="Wrap" Text="0" 
+                   VerticalAlignment="Top" Height="128" Width="248"/>
 
     </Grid>
 </Page>
