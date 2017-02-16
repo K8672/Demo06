@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace EuroApp
+namespace IkkunaApp
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -27,21 +27,23 @@ namespace EuroApp
             this.InitializeComponent();
         }
 
-        public double Markka = 0;
-        public double Euro = 0;
+        public double ikkunan_leveys = 0;
+        public double ikkunan_korkeus = 0;
+        public double karmin_leveys = 0;
+        public double apu1;
+        public double apu2;
+        public double apu3;
 
-        private void Markatbutton_Click(object sender, RoutedEventArgs e)
+        private void laskubutton_Click(object sender, RoutedEventArgs e)
         {
-            double value = double.Parse(MarkkatextBox.Text);
-            Euro = value / 5.94573;
-            EurotextBox.Text = Euro.ToString("0.00");
-        }
+            double ikkunan_leveys = double.Parse(leveysBox.Text);
+            double ikkunan_korkeus = double.Parse(korkeusBox.Text);
+            double karmin_leveys = double.Parse(karmiBox.Text);
 
-        private void EuroButton_Click(object sender, RoutedEventArgs e)
-        {
-            double value = double.Parse(EurotextBox.Text);
-            Markka = value * 5.94573;
-            MarkkatextBox.Text = Markka.ToString("0.00");
+            apu1 = ikkunan_leveys * ikkunan_korkeus;
+            ikkunaBlock.Text = apu1.ToString("0.00") + " cm^2";
+
+            apu2 = 
         }
     }
 }
